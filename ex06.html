@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada</title>
+    <script type="text/javascript">
+      function exibirTabuada() {
+        var numero = parseInt(prompt("Digite um número para ver sua tabuada:"));
+
+        if (isNaN(numero)) {
+          alert("Por favor, digite um número válido.");
+          return;
+        }
+
+        var resultado = "<h2>Tabuada do " + numero + ":</h2>";
+
+        for (var i = 1; i <= 10; i++) {
+          resultado += numero + " x " + i + " = " + numero * i + "<br>";
+        }
+
+        document.getElementById("output").innerHTML = resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Tabuada</h1>
+    <button onclick="exibirTabuada()">Exibir Tabuada</button>
+    <div id="output"></div>
+  </body>
+</html>

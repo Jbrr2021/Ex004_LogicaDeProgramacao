@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Notas</title>
+    <script type="text/javascript">
+      function verificarNotas() {
+        var nomeAluno = prompt("Digite o nome do aluno:");
+        var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        var nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        var nota3 = parseFloat(prompt("Digite a terceira nota:"));
+        var nota4 = parseFloat(prompt("Digite a quarta nota:"));
+
+        var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        var resultado =
+          "Nome do Aluno: " + nomeAluno + "\nMédia: " + media.toFixed(2) + "\n";
+
+        if (media > 9) {
+          resultado += "Parabéns !! Excelente";
+        } else if (media >= 7) {
+          resultado += "Parabéns !!";
+        } else if (media > 5 && media < 7) {
+          resultado += "Ops! Você está de recuperação";
+        } else {
+          resultado += "Infelizmente você não passou!";
+        }
+
+        alert(resultado);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Verificação de Notas</h1>
+    <button onclick="verificarNotas()">Verificar Notas</button>
+  </body>
+</html>
